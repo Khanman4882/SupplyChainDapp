@@ -15,7 +15,7 @@ contract Consumer {
         ) public payable {
         require(
             msg.value ==_amount && _amount != 0,
-            "Purchase Amount not Correct"
+            "Purchase Amount not correct"
             );
 
         supplyChain.purchaseTokens{value: msg.value}(_amount);
